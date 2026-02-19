@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #aaea66 0%, #d82878 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    color:rgba(255, 255, 255, 0.96);
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+#mensaje {
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 20px;
+}
+
+
+#boton {
+    padding: 12px 30px;
+    font-size: 1em;
+    background-color: #880e4f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#boton:hover {
+    background-color: #880e4f;
+}
+
