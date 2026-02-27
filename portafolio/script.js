@@ -1,17 +1,20 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const boton = document.getElementById('boton');
-    const mensaje = document.getElementById('mensaje');
-    
-    let contador = 0;
-    
-    boton.addEventListener('click', function() {
-        contador++;
-        mensaje.textContent = `¡Hiciste clic ${contador} veces!`;
-        
-        // Cambiar color aleatorio
-        const colores = ['#d81b60 ', '#8e24aa', '#1565c0', '#26a69a'];
-        const colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
-        document.body.style.background = colorAleatorio;
+// Función para animar al hacer scroll
+const mostrarTarjetas = () => {
+    const tarjetas = document.querySelectorAll('.project-card');
+    tarjetas.forEach(t => {
+        const distancia = t.getBoundingClientRect().top;
+        const alturaPantalla = window.innerHeight / 1.3;
+        if (distancia < alturaPantalla) {
+            t.classList.add('visible');
+        }
     });
-});
+};
+
+window.addEventListener('scroll', mostrarTarjetas);
+
+// Ejecutar una vez al cargar por si ya están visibles
+mostrarTarjetas();
+
+
+
 
